@@ -56,20 +56,18 @@ states_capitals = {
 }
 
 
-
-
 correct = 0
 incorrect = 0
 
 for i in range(5):
     state = random.choice(list(states_capitals.keys()))
-    answer = input("What is the capital of {state}? ").lower()
+    answer = input(f"What is the capital of {state}? ").lower()
 
     if answer == states_capitals[state]:
         print("Correct")
         correct += 1
     else:
-        print("Wrong, The correct a answer is: {states_capitals[state]}")
+        print(f"Wrong, The correct answer is: {states_capitals[state]}")
         incorrect += 1
 
 print(f"\nYou got {correct} correct and {incorrect} incorrect.")
