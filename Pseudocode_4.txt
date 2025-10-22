@@ -1,0 +1,34 @@
+Create an empty dictionary called course_list
+
+Print "Enter course information:"
+
+Loop forever:
+    Ask "Enter course ID (or 'done' to finish): "
+    Get course_id from user
+
+    If course_id is "done":
+        Exit the loop
+
+    Ask "Enter course name: "
+    Get course_name from user
+
+    Store course_id and course_name in course_list
+
+Ask "Enter subject to search for: "
+Get search_subject from user
+
+Print "Courses with subject" and search_subject
+
+Set found_count to 0
+
+For each course_id and course_name in course_list:
+    Split course_id by spaces and take the first part as subject
+
+    If subject matches search_subject:
+        Print course_id + ": " + course_name
+        Add 1 to found_count
+
+If found_count is 0:
+    Print "No courses found with subject" and search_subject
+
+END
